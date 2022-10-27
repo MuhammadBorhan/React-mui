@@ -7,7 +7,7 @@ import { Box, Stack } from "@mui/system";
 
 function App() {
   return (
-    <Box sx={{ padding: "0 40px" }}>
+    <Box>
       <Navbar />
       <Stack direction="row" gap="10px" justifyContent="space-between">
         <Sidebar></Sidebar>
