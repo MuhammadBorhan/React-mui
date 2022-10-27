@@ -1,31 +1,18 @@
-import { Button, Typography } from "@mui/material";
-import { Add, Settings } from "@mui/icons-material";
+import Sidebar from "./components/Sidebar";
+import Feed from "./components/Feed";
+import Rightbar from "./components/Rightbar";
+import { Box, Stack } from "@mui/system";
+// import Sidebar from './components/Sidebar';
 
 function App() {
   return (
-    <div className="App">
-      <Button variant="text">Text</Button>
-      <Button startIcon={<Settings />} variant="contained" color="secondary">
-        Setting
-      </Button>
-      <Button startIcon={<Add />} variant="contained" color="secondary">
-        Add
-      </Button>
-      <Button variant="outlined" disabled>
-        Outlined
-      </Button>
-
-      <Typography variant="p" component="h1">
-        h1. Heading
-      </Typography>
-
-      <p>borhan</p>
-      <h1>boahan</h1>
-      <p>borhan</p>
-      <div></div>
-      <p></p>
-      <h1></h1>
-    </div>
+    <Box sx={{ padding: "0 40px" }}>
+      <Stack direction="row" spacing="2" justifyContent="space-between">
+        <Sidebar></Sidebar>
+        <Feed></Feed>
+        <Rightbar></Rightbar>
+      </Stack>
+    </Box>
   );
 }
 
