@@ -4,7 +4,9 @@ import React from 'react';
 const Rightbar = () => {
     return (
         <Box flex={3} bgcolor="cadetblue" p={2}>
-            rightbar
+            <Box position="fixed">
+                rightbar
+            </Box>
         </Box>
     );
 };

@@ -1,10 +1,12 @@
-import { AccountBoxOutlined, Article, Group, Home, Pages, Settings, Store } from '@mui/icons-material';
-import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
+import { AccountBoxOutlined, Article, Group, Home, Label, ModeNight, Pages, Settings, Store } from '@mui/icons-material';
+import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch } from '@mui/material';
 import React from 'react';
 
 const Sidebar = () => {
+    const label = { inputProps: { 'aria-label': 'Switch demo' } };
     return (
         <Box flex={1} p={2} sx={{display:{xs:'none',sm:'none',md:'block'}}}>
+          <Box position='fixed'>
             <List>
           <ListItem sx={{display:'flex',flexDirection:'column',alignItems:'start'}} disablePadding>
             <ListItemButton component='a' href="#home">
@@ -43,8 +45,15 @@ const Sidebar = () => {
               </ListItemIcon>
               <ListItemText primary="Settings" />
             </ListItemButton>
+            <ListItemButton component='f' href="#setting">
+              <ListItemIcon>
+              <ModeNight></ModeNight>
+              </ListItemIcon>
+              <Switch></Switch>
+            </ListItemButton>
           </ListItem>
           </List>
+          </Box>
         </Box>
     );
 };
