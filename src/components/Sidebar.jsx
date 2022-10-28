@@ -20,7 +20,7 @@ import {
 } from "@mui/material";
 import React from "react";
 
-const Sidebar = () => {
+const Sidebar = ({ mode, setMode }) => {
   const label = { inputProps: { "aria-label": "Switch demo" } };
   return (
     <Box
@@ -78,7 +78,11 @@ const Sidebar = () => {
               <ListItemIcon>
                 <ModeNight></ModeNight>
               </ListItemIcon>
-              <Switch></Switch>
+              <Switch
+                onChange={() => {
+                  setMode(mode === "light" ? "dark" : "light");
+                }}
+              />
             </ListItemButton>
           </ListItem>
         </List>

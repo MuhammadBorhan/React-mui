@@ -1,4 +1,4 @@
-import { AccountCircle, Add } from "@mui/icons-material";
+import { AccountCircle, Add, MoodRounded } from "@mui/icons-material";
 import {
   Avatar,
   Fab,
@@ -51,10 +51,11 @@ const AddToolTip = () => {
           sx={{
             width: "300px",
             height: "300px",
-            bgcolor: "white",
             borderRadius: "10px",
             padding: "10px",
           }}
+          bgcolor={"background.default"}
+          color={"text.primary"}
         >
           <Typography sx={{ textAlign: "center", color: "gray" }}>
             Create a new post...{" "}
@@ -76,6 +77,9 @@ const AddToolTip = () => {
               sx={{ width: "250px" }}
             />
           </FormControl>
+          <Box>
+            <MoodRounded></MoodRounded>
+          </Box>
         </Box>
       </Modal>
     </Box>

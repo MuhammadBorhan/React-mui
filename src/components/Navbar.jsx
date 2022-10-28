@@ -41,7 +41,10 @@ const Navbar = () => {
           <Pets sx={{ display: { xs: "block", sm: "none" } }}></Pets>
         </Box>
         <Search>
-          <InputBase placeholder="Search..."></InputBase>
+          <InputBase
+            placeholder="Search..."
+            sx={{ bgcolor: "background.default", color: "text.primary" }}
+          ></InputBase>
         </Search>
         <Icons
           sx={{
